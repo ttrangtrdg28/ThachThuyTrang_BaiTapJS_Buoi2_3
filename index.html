@@ -17,57 +17,84 @@
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-    <section class="row m-3">
-        <div class="col mb-5">
-            <h3>Bài 1: Tính tiền lương nhân viên</h3>
-            <input class="form-control mb-2 p-2" id="costPerDay" type="number" value="100000"
-                placeholder="Số tiền 1 ngày làm">
-            <input class="form-control mb-2 p-2" id="workDay" type="number" id="workDay" placeholder="Số ngày làm">
-            <button class="btn btn-primary mb-3" id="total" type="submit">Tính</button>
-            <p id="costPerMonth"></p>
-        </div>
+    <section class="container custom">
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#b1">Bài 1</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#b2">Bài 2</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#b3">Bài 3</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#b4">Bài 4</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#b5">Bài 5</a>
+            </li>
+        </ul>
 
-        <div class="col mb-5">
-            <h3>Bài 2: Tính giá trị trung bình</h3>
-            <input class="form-control mb-2 p-2" type="number" id="num1" placeholder="Số thực thứ 1">
-            <input class="form-control mb-2 p-2" type="number" id="num2" placeholder="Số thực thứ 2">
-            <input class="form-control mb-2 p-2" type="number" id="num3" placeholder="Số thực thứ 3">
-            <input class="form-control mb-2 p-2" type="number" id="num4" placeholder="Số thực thứ 4">
-            <input class="form-control mb-2 p-2" type="number" id="num5" placeholder="Số thực thứ 5">
-            <button class="btn btn-primary mb-3" id="avg" type="submit">Tính</button>
-            <p id="average"></p>
-        </div>
+        <div class="tab-content">
+            <div class="tab-pane container active" id="b1">
+                <h3>Bài 1: Tính tiền lương nhân viên</h3>
+                <div class="row">
+                    <input class="form-control col" id="costPerDay" type="number" value="100000"
+                        placeholder="Số tiền 1 ngày làm">
+                    <input class="form-control col" id="workDay" type="number" id="workDay" placeholder="Số ngày làm">
+                </div>
+                <button class="btn btn-primary mb-3" id="total" type="submit">Tính</button>
+                <p id="costPerMonth"></p>
+            </div>
 
-        <div class="col mb-5">
-            <h3>Bài 3: Quy đổi tiền</h3>
-            <form class="d-flex align-items-center justify-content-between">
-                <span>1 USD = </span>
-                <input class="form-control mb-2 p-2" type="number" id="vnd" placeholder="VND" value="23500">
-            </form>
-            <form class="d-flex align-items-center justify-content-between">
-                <input class="form-control mb-2 p-2" type="number" id="usd" placeholder="USD">
-                <span id="changeMoney"></span>
-            </form>
-            <button class="btn btn-primary mb-3" id="changeToVND">Quy đổi</button>
-        </div>
+            <div class="tab-pane container fade" id="b2">
+                <h3>Bài 2: Tính giá trị trung bình</h3>
+                <div class="row">
+                    <input class="form-control col" type="number" id="num1" placeholder="Số thực thứ 1">
+                    <input class="form-control col" type="number" id="num2" placeholder="Số thực thứ 2">
+                    <input class="form-control col" type="number" id="num3" placeholder="Số thực thứ 3">
+                    <input class="form-control col" type="number" id="num4" placeholder="Số thực thứ 4">
+                    <input class="form-control col" type="number" id="num5" placeholder="Số thực thứ 5">
+                </div>
+                <button class="btn btn-primary mb-3" id="avg" type="submit">Tính</button>
+                <p id="average"></p>
+            </div>
 
-        <div class="col mb-5">
-            <h3>Bài 4: Tính diện tích, chu vi HCN</h3>
-            <input class="form-control mb-2 p-2" type="number" id="cd" placeholder="Nhập chiều dài hình chữ nhật">
-            <input class="form-control mb-2 p-2" type="number" id="cr" placeholder="Nhập chiều rộng hình chữ nhật">
-            <button class="btn btn-primary mb-3" id="calculate" type="submit">Tính</button>
-            <p id="cv"></p>
-            <p id="dt"></p>
-        </div>
+            <div class="tab-pane container fade" id="b3">
+                <h3>Bài 3: Quy đổi tiền</h3>
+                <form class="d-flex align-items-center justify-content-between">
+                    <span>1 USD = </span>
+                    <input class="form-control" type="number" id="vnd" placeholder="VND" value="23500">
+                </form>
+                <form class="d-flex align-items-center justify-content-between">
+                    <input class="form-control" type="number" id="usd" placeholder="USD">
+                    <span id="changeMoney"></span>
+                </form>
+                <button class="btn btn-primary mb-3" id="changeToVND">Quy đổi</button>
+            </div>
 
-        <div class="col mb-5">
-            <h3>Bài 5: Tính tổng 2 ký số</h3>
-            <input class="form-control mb-2 p-2" type="number" id="number" placeholder="Nhập số có 2 chữ số">
-            <button class="btn btn-primary mb-3" id="sum">Tính</button>
-            <p id="sum2Number"></p>
+            <div class="tab-pane container fade" id="b4">
+                <h3>Bài 4: Tính diện tích, chu vi HCN</h3>
+                <div class="row">
+                    <input class="form-control col" type="number" id="cd" placeholder="Nhập chiều dài hình chữ nhật">
+                    <input class="form-control col" type="number" id="cr" placeholder="Nhập chiều rộng hình chữ nhật">
+                </div>
+                <button class="btn btn-primary mb-3" id="calculate" type="submit">Tính</button>
+                <p id="cv"></p>
+                <p id="dt"></p>
+            </div>
+
+            <div class="tab-pane container fade" id="b5">
+                <h3>Bài 5: Tính tổng 2 ký số</h3>
+                <div class="row">
+                    <input class="form-control col" type="number" id="number" placeholder="Nhập số có 2 chữ số">
+                </div>
+                <button class="btn btn-primary mb-3" id="sum">Tính</button>
+                <p id="sum2Number"></p>
+            </div>
         </div>
     </section>
-
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
